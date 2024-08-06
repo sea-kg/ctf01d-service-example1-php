@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  ctf01d-example-service2-php:
+    build: .
+    volumes:
+      - "./flags:/service/app/pages"
+    ports:
+      - "4003:4003"
+    restart: always
+    networks:
+      - ctf01d_example_service2_php_network
+
+networks:
+  ctf01d_example_service2_php_network:
+    driver: bridge

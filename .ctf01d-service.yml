@@ -1,0 +1,16 @@
+# worked with versions:
+ctf01d-versions:
+    - v0.5.2
+
+# docker commands for checker
+install-checker-requirements-v0.5.2:
+    - "RUN apt-get -y update"
+    - "RUN apt-get install python3 python3-pip && pip3 install requests"
+
+# part of config for jury-checker
+checker-config-v0.5.2:
+    id: "example_service2_php" # work directory will be checker_example_service2_php
+    service_name: "Service2 PHP"
+    enabled: yes
+    script_path: "./checker.py"
+    script_wait_in_sec: 5 # max time for running script
