@@ -14,3 +14,4 @@ checker-config-v0.5.2:
     enabled: yes
     script_path: "./checker.py"
     script_wait_in_sec: 5 # max time for running script
+    time_sleep_between_run_scripts_in_sec: 15
